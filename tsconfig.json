@@ -1,5 +1,17 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "sourceMap": false,
+    "strict": false,
+    "rootDir": ".",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*.ts"],
+    },
+    "noEmit": true
+  },
 }
