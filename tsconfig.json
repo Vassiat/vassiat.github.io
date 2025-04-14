@@ -10,7 +10,7 @@
     "rootDir": ".",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["*.ts"],
+      "@/*": ["./*"],
     },
     "noEmit": true
   },
