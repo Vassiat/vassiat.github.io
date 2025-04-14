@@ -5,3 +5,35 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'LondrinaOutline';
+    src: url('/fonts/londrina/LondrinaOutline-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LondrinaShadow';
+    src: url('/fonts/londrina/LondrinaShadow-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LondrinaSketche';
+    src: url('/fonts/londrina/LondrinaSketche-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Londrina';
+    src: url('/fonts/londrina/LondrinaSolid-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -2,4 +2,8 @@
 
 @theme {
     --font-helium: "Helium", 'sans-serif';
+    --font-londrina: "Londrina", 'sans-serif';
+    --font-londrina-sketche: "LondrinaSketche", 'sans-serif';
+    --font-londrina-shadow: "LondrinaShadow", 'sans-serif';
+    --font-londrina-outline: "LondrinaOutline", 'sans-serif';
 }
