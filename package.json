@@ -1,7 +1,9 @@
 {
+  "version": "0.0.1",
   "name": "portfolio-github",
   "type": "module",
-  "version": "0.0.1",
+  "description": "Portfolio de Adrián Tablante",
+  "author": "Adrián Tablante <atablante04@gmail.com> (https://vassiat.github.io)",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
