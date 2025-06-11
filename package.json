@@ -2,13 +2,31 @@
   "version": "0.0.1",
   "name": "portfolio-github",
   "type": "module",
-  "description": "Portfolio de Adrián Tablante",
+  "description": "Portfolio personal de Adrián Tablante como desarrollador, mostrando proyectos y habilidades",
   "author": "Adrián Tablante <atablante04@gmail.com> (https://vassiat.github.io)",
+  "homepage": "https://vassiat.github.io/",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
+  },
+  "keywords": [
+    "frontend",
+    "web development",
+    "portfolio",
+    "react",
+    "astro",
+    "javascript",
+    "html",
+    "css",
+    "diseño web",
+    "desarrollo web"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vassiat/vassiat.github.io.git"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.3",
