@@ -32,20 +32,25 @@ export const displayNames = Object.keys(dictionaries).map((k) => {
 });
 
 export const getCurrentTranslation = () => {
-  let currentLanguage: unknown = {};
+  let currentTranslation: unknown = {};
 
   const locallang = globalThis.localStorage?.getItem(KEY_STORAGE);
   const lngNavigator = globalThis.navigator.language.split("-")[0];
 
-  currentLanguage = getTranslations(lngNavigator);
+  currentTranslation = getTranslations(lngNavigator);
 
   if (locallang) {
-    currentLanguage = getTranslations(locallang);
-  } else if (Object.values(currentLanguage ?? {}).length < 1) {
-    currentLanguage = getTranslations();
+    currentTranslation = getTranslations(locallang);
+  } 
+  
+  if (Object.values(currentTranslation ?? {}).length < 1) {
+    if (locallang) {
+      globalThis.localStorage?.removeItem(KEY_STORAGE);
+    }
+    currentTranslation = getTranslations();
   }
 
-  return currentLanguage
+  return currentTranslation
 }
 
 export const defaultTranslation = getCurrentTranslation() ?? getTranslations();
