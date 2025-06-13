@@ -29,7 +29,6 @@
     "url": "git+https://github.com/vassiat/vassiat.github.io.git"
   },
   "dependencies": {
-    "@alpinejs/persist": "^3.14.9",
     "@astrojs/alpinejs": "^0.4.8",
     "@tailwindcss/vite": "^4.1.3",
     "@types/alpinejs": "^3.13.11",
