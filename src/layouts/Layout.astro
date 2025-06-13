@@ -1,6 +1,11 @@
 ---
 import "../styles/global.css"
 import "../styles/font.css"
+// const languages = await import.meta.glob('../i18n/*.json');
+
+// type SupportedLanguage = typeof languages;
+//   .filter(page => page.split('/').pop() !== 'index.astro' && page.split('/').pop() !== 'auth.astro')
+//   .map(page => page!.split('/')!.pop()!.replace('.astro', ''));
 ---
 <!doctype html>
 <html lang="es">
@@ -27,8 +32,27 @@ import "../styles/font.css"
 		<link rel="canonical" href="https://vassiat.github.io/">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Adrián Tablante | Portfolio</title>
+		<script>
+    		import { getTranslations, getCurrentTranslation, KEY_STORAGE, defaultTranslation } from "@/i18n";
+			import Alpine from "alpinejs";
+
+			document.addEventListener("alpine:init", () => {
+				Alpine.data("i18n", function () {
+					return {
+						...defaultTranslation,
+						setLanguage(lng) {
+							const changedLanguage = getTranslations(lng) ?? getCurrentTranslation();
+							if (changedLanguage !== getCurrentTranslation()) {
+								Object.assign(this, changedLanguage)
+								localStorage.setItem(KEY_STORAGE, lng)
+							}
+						}
+					}
+				})
+			})
+		</script>
 	</head>
-	<body class="font-helium">
+	<body class="font-helium" x-data="i18n" >
 		<slot />
 	</body>
 </html>

@@ -1,17 +1,26 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import persona from '@/assets/persona.jpg';
+import ChangeLanguageBtn from '@/components/ChangeLanguageBtn.astro';
+import { defaultTranslation } from '@/i18n';
 ---
 
 <Layout>
-	<section class="relative max-h-screen flex items-center justify-end">
+	<header class="flex items-center justify-end pr-3">
+		<ChangeLanguageBtn />
+	</header>
+	<section class="relative h-screen flex items-center justify-end">
 		<div class="absolute left-0 ml-4 flex flex-col items-center">
 			<h1 class="font-londrina text-center text-8xl leading-20 text-[#f56342]">
 				Adrián<br/>
 				Tablante
 			</h1>
-			<small class="text-xl text-black/75">Desarrollador Front-End</small>
+			<small class="text-xl text-black/75" x-text="role">
+				{
+					defaultTranslation.role
+				}
+			</small>
 		</div>
-		<img src={persona.src} alt="Adrián Tablante" class="h-screen" />
+		<img src={persona.src} alt="Adrián Tablante" class="h-full" />
 	</section>
 </Layout>
