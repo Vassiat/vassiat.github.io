@@ -35,7 +35,7 @@ export const getCurrentTranslation = () => {
   let currentTranslation: unknown = {};
 
   const locallang = globalThis.localStorage?.getItem(KEY_STORAGE);
-  const lngNavigator = globalThis.navigator.language.split("-")[0];
+  const lngNavigator = globalThis.navigator?.language.split("-")[0];
 
   currentTranslation = getTranslations(lngNavigator);
 
