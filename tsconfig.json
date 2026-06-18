@@ -8,9 +8,8 @@
     "sourceMap": false,
     "strict": false,
     "rootDir": ".",
-    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./src/*"],
     },
     "noEmit": true
   },

@@ -5,6 +5,8 @@
   "description": "Portfolio personal de Adrián Tablante como desarrollador, mostrando proyectos y habilidades",
   "author": "Adrián Tablante <atablante04@gmail.com> (https://vassiat.github.io)",
   "homepage": "https://vassiat.github.io/",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -13,7 +15,7 @@
   },
   "keywords": [
     "frontend",
-    "web development",
+    "web developer",
     "portfolio",
     "react",
     "astro",
@@ -23,19 +25,29 @@
     "diseño web",
     "desarrollo web"
   ],
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vassiat/vassiat.github.io.git"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.8",
+    "@astrojs/alpinejs": "^0.5.0",
     "@tailwindcss/vite": "^4.1.3",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.9",
-    "astro": "^5.6.1",
+    "astro": "^6.4.8",
     "tailwindcss": "^4.1.3",
     "ts-standard": "^12.0.2",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.1.2",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "pnpm": ">=11.1.2",
+    "node": ">=22.11.0"
   }
 }
